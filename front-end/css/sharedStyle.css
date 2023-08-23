@@ -1,0 +1,570 @@
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 0; 
+}
+.container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+.d-flex{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.d-flex{
+    position: relative;
+}
+
+/* nav3Mennustart */
+
+.navbar-nav {
+    margin: 7.5px -15px;
+}
+
+.main-nav>li>a {
+    padding: 20px 0px;
+    text-decoration: none;
+    color: black !important;
+}
+
+/* searchBar start*/
+
+.header-search {
+    padding: 15px 0px;
+  }
+  .input-select {
+    padding: 0px 15px;
+    background: #FFF;
+    border: 0px solid #E4E7ED;
+    border-bottom: 1px solid #E4E7ED;
+    height: 39px;
+  }
+
+  .input {
+    height: 38px;
+    padding: 0px 15px;
+    border: 1px solid #E4E7ED;
+    background-color: #FFF;
+    width: 100%;
+  }
+  
+  textarea.input {
+    padding: 15px;
+    min-height: 90px;
+  }
+
+  .header-search form .search-btn {
+    height: 40px;
+    width: 100px;
+    background: #D10024;
+    color: #FFF;
+    font-weight: 700;
+    border: none;
+    border-radius: 0px 40px 40px 0px;
+  }
+
+  .header-search form {
+    position: relative;
+  }
+  
+  .header-search form .input-select {
+    margin-right: -4px;
+    border-radius: 40px 0px 0px 40px;
+  }
+  
+  .header-search form .input {
+    width: calc(100% - 260px);
+    margin-right: -4px;
+  }
+  
+  .header-search form .search-btn {
+    height: 40px;
+    width: 100px;
+    background: #D10024;
+    color: #FFF;
+    font-weight: 700;
+    border: none;
+    border-radius: 0px 40px 40px 0px;
+  }
+
+
+
+  /* searchEnd */
+  .navMenuIcon a{
+    color: white;
+    text-decoration: none;
+  }
+
+/* nav3Mennuend */
+.nav>li {
+    position: relative;
+    display: block;
+}
+.d-flex div ul{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navBarList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px!important;
+}
+.navBarList li{
+    list-style: none;
+    padding-right: 50px ;
+}
+.navBarListRightLi{
+
+  padding-right: 0px!important;
+}
+.rightSideOfNav{
+    float: left; position: absolute;right: 0px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.navBarList li{
+color: white;
+}
+.secondaryNav{
+     padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #15161D;;
+}
+.NavIcons{
+    font-size: 0.8rem;
+    color: white !important;
+}
+.NavIcons i span{
+    border: red 1px solid ;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 10px;
+    padding: 5px;
+    color: white !important;
+    margin: 2px;
+}
+.menu-toggle {
+  display: none;
+}
+
+.redLine{
+    height: 3px;
+    background-color: red;
+}
+.navMenu{
+    background: #FFF;
+    border-bottom: 2px solid #E4E7ED;
+}
+/* inputandsearch start */
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+   
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+  
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+   
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  /* inputandsearch end */
+
+  
+/* bootstrap */
+
+/* thridNav */
+.navList{
+font-size: 1.2rem;
+}
+
+#navigation {
+    background: #FFF;
+    border-bottom: 2px solid #E4E7ED;
+    border-top: 3px solid #D10024;
+  }
+
+  .main-nav>li+li {
+    margin-left: 30px
+  }
+  
+  .main-nav>li>a {
+    padding: 20px 0px;
+  }
+  
+  .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+    color: #D10024;
+    background-color: transparent;
+  }
+  
+  .main-nav>li>a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    
+    height: 2px;
+    background-color: #D10024;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .main-nav>li>a:hover:after, .main-nav>li>a:focus:after, .main-nav>li.active>a:after {
+    width: 100%;
+  }
+  .NavIconsLeft{
+    margin-top: 20px;justify-content:space-evenly;
+  }
+  .thridNavBarONFULL{
+    display: flex;align-items: center; padding: 10px 0px;
+  }
+  .thridNavBarONFULL ul li a{
+    font-size: 1rem;
+  }
+  .header-ctn li.nav-toggle {
+    display: none;
+  }
+  .nav:after, .nav:before {
+    display: table;
+    content: " ";
+  }
+  .main-nav>li+li {
+    margin-left: 30px;
+}
+#popUp{
+  position: absolute;
+  overflow-x: hidden;
+   background-color: rgb(255, 255, 255); 
+   top:50px;left: 0;right: 0 ;height: auto;
+   color: #15161D;
+   font-size: 1rem;
+   z-index: 50; 
+   max-height: 300px;
+   overflow-y:scroll;
+}
+.checkOut{
+  height: 50px;
+
+
+  color: black;
+  font-size: 1.3rem;
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.btnCheckout{
+  font-size: 1.3rem;
+  border: 1px solid white;
+  
+  width: 100%;
+ height: 50px;
+ background-color: #D10024;
+ color: white;
+}
+#closePopUp{
+  position: absolute; right:10px; top: 0px;padding:10px;z-index:10;
+}
+.thridNavBarONFULL  ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+  @media (min-width: 768px){
+    .navbar-nav>li {
+        float: left;
+    }
+  }
+
+
+
+  /*----------------------------*\
+	responsive nav
+\*----------------------------*/
+
+@media only screen and (max-width: 992px) {
+    .header-ctn .menu-toggle {
+      display: inline-block;
+    }
+    .main-nav>li>a {
+      color: white !important;
+
+    }
+    
+    #responsive-nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: rgba(21, 22, 29, 0.954);
+      
+      height: 100vh;
+      max-width: 250px;
+      width: 0%;
+      overflow: hidden;
+      z-index: 22;
+      padding-top: 60px;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all;
+    }
+  
+    #responsive-nav.active {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%);
+      width: 100%;
+    }
+    .main-nav {
+        
+      margin: 0px;
+      float: none;
+    }
+    .main-nav>li {
+      display: block;
+      float: none;
+    
+    }
+    .main-nav>li+li {
+      margin-left: 0px;
+      
+    }
+    .main-nav>li>a {
+      padding: 15px;
+      color: #FFF;
+    }
+  }
+/* NAVend   */
+
+/* firstSectionStart */
+
+/* firstSectionTest */
+
+
+/* firstSectionEnd*/
+
+/* footerStart */
+
+#footer{
+  background: #15161D;
+      color: #B9BABC;
+}
+.footerColum{
+  padding: 0px 7px; box-sizing: border-box;
+}
+ h3{
+  font-size: 1.7rem;
+ }
+ .footerIcons{
+  justify-content: center;
+ }
+ .footerIcons div{
+  font-size: 2rem;
+padding: 30px 20px;
+ }
+.footerLastText{
+  padding: 10px 0px 50px 0px;
+  text-align: center;
+  font-size: 19px!important;
+}
+.footerColum div{
+  margin: 70px 0px;
+}
+.footerColum p{
+  font-size: 20px;
+}
+.footerColum ul li {
+
+  list-style: none;
+  padding: 0px 0px 20px 0px;
+}
+.footerColum ul li a:hover {
+
+  color: #D10024;
+  
+}
+
+.footerColum ul li a {
+  font-size: 20px;
+color: white;
+text-decoration: none;
+}
+.footerColum ul li a i{
+  color: #D10024;
+ padding-right:20px ;
+  }
+.footerColum ul {
+  margin: 0;
+  padding:  0px;
+}
+
+.visible-lg, .visible-md, .visible-sm, .visible-xs {
+  display: none!important;
+}
+.clearfix{
+  clear:both
+}
+@media (max-width: 1200px) {
+  .col-footer{
+    width: 50%!important;
+    flex: 0 0 auto;
+  }
+}
+
+navBarImg{
+  width: 100%;
+}
+
+/* footerEnd */
+
+@media (min-width: 992px){
+
+    .col-md-6 {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+}
+@media (max-width: 992px){
+
+    .searchBar{
+        width: 100%!important;
+    }
+
+    
+}
+
+
+@media (min-width: 576px) {
+.container {
+      max-width: 540px!important;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 700px!important;
+    }
+    /* .col-md-6{
+        flex: 0 0 auto;
+        width: 50%;
+    } */
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px!important;
+    }
+
+  }
+  @media (min-width: 1200px) {
+     .container {
+      max-width: 1140px!important;
+    }
+ 
+  }
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px!important;
+    }
+ 
+  }
+  
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+      }
+      .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+}
+@media (max-width: 992px) {
+    .searchBar{
+        width: 100%!important;
+    }
+
+    .navBarImg{
+        flex: 0 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    .navSearchBar{
+        flex: 0 0 auto;
+        width: 100%;
+        justify-content: center;
+    }
+    .navIcons{
+        flex: 0 0 auto;
+        width: 100%;
+        justify-content: center;
+    }
+    .imgCol{
+        flex: 0 0 auto;
+        width: 100%!important;
+        text-align: center;
+      
+    }
+    .navMenuIcon{
+        display: block !important;
+        color: white;
+    }
+  }
+@media (min-width: 892px) {
+    .imgCol{
+        flex: 0 0 auto;
+        width: 100%!important;
+        text-align: center;
+      
+    }
+ 
+
+}

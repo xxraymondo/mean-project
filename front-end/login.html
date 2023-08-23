@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sharedStyle.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/frontend-k.css">
+    <title>Store Login page </title>
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <!-- <script src="https://accounts.google.com/gsi/client" async defer></script> -->
+    <!-- <meta name="google-signin-client_id" content="792002934801-9oe7b3563fitfaanqqgv179kksrmhqrp.apps.googleusercontent.com"> -->
+    <script src="./js/auth.js"></script>
+</head>
+
+<body>
+ 
+
+    <div style="background-color: #1E1F29">
+        <nav class="container ">
+            <div  class="d-flex" style="justify-content: space-between; align-items: center;">
+                <div>
+                    <ul class="navBarList">
+                        <li><span><i class="fa-solid fa-magnifying-glass"></i></span> +021-95-51-84 </li>
+                        <li><span><i class="fa-regular fa-envelope"></i></span> email@email.com </li>
+
+                        <li><span><i class="fa-solid fa-location-dot"></i></span> 1734 Stonecoal Road </li>
+                    </ul>
+                </div>
+                <div>
+
+                    <ul class="navBarList ">
+                        <li class="navBarListRightLi">
+                            <span><i class="fa-regular fa-user"></i></span>
+                            <span id="userNamePlaceholder">My Account</span>
+                            <a href="#" id="logoutLink" style="margin-left: 10px; color: white;">Logout</a>
+                            <a href="/login.html" id="loginLink" style="margin-left: 10px; color: white; display: none;">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div class="secondaryNav">
+        <nav class="container ">
+            <div  class="d-flex " >
+                <div class="col-md-3 navBarImg">
+                    <img src="./img/logo.png">
+                </div>
+                <div class="col-md-6 searchBar">
+                    <div style=" width: 100%;" class="header-search">
+                        <form>
+                            <select class="input-select">
+                                <option value="0">All Categories</option>
+                                <option value="1">Category 01</option>
+                                <option value="1">Category 02</option>
+                            </select>
+                            <input style="display: inline-block;" class="input" placeholder="Search here"><button
+                                style="display: inline-block;margin-left:-4px;" class="search-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3 navIcons">
+                    <div  class="d-flex NavIconsLeft">
+
+                        <div style="text-align: center;" class="NavIcons"><i style="margin-bottom: 5px;" class="fa-regular fa-heart "><span>10</span>
+                            </i>
+                            <div >Your Wishlist</div>
+                        </div>
+                        <div style="text-align: center;" class="NavIcons"><i
+                            style="margin-bottom: 5px;" class="fa-solid fa-cart-shopping"><span>10</span> </i>
+                            <div>Your Wishlist</div>
+
+                        </div>
+                        <div class="navMenuIcon menu-toggle" style="text-align: center;" class="NavIcons">
+                            <a id="menuClick" href="#">
+                                <i class="fa-solid fa-bars"></i>
+                                <div>Menu</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+        </nav>
+
+    </div>
+
+    <div class="thridNav">
+        <div class="redLine"></div>
+        <nav id="navigation">
+            <!-- container -->
+            <div class="container ">
+                <!-- responsive-nav -->
+                <div class="thridNavBarONFULL" id="responsive-nav">
+                    <!-- NAV -->
+                    <ul class="main-nav nav navbar-nav">
+                        <li class="navList"><a href="/index.html">Home</a></li>
+                        <li class="navList"><a href="#">Hot Deals</a></li>
+                        <li class="navList"><a href="#">Categories</a></li>
+                        <li class="navList"><a href="#">Laptops</a></li>
+                        <li class="navList"><a href="#">Smartphones</a></li>
+                        <li class="navList"><a href="#">Cameras</a></li>
+                        <li class="navList"><a href="#">Accessories</a></li>
+                    </ul>
+                    <!-- /NAV -->
+                </div>
+                <!-- /responsive-nav -->
+            </div>
+            <!-- /container -->
+        </nav>
+    </div>
+
+ 		<!-- /BREADCRUMB -->
+         <section class="login">
+			<div class="login-box">
+			  <h1>Login</h1>
+			  <form id="loginForm">
+				<div>
+				  <label for="email">Email:</label>
+				  <input type="email" id="email" name="email" required>
+				</div>
+                <br>
+				<div class="password-input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required name="password">
+                    <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                      <i class="fa fa-eye" id="password-eye-icon" style="color: black;"></i>
+                    </span>
+                  </div>  
+                  <br>
+                  <!-- <div class="error-message" id="errorMessage"></div>    -->
+                  <br>            
+				<button type="submit">Login</button>
+			  </form>
+              <br>
+              <!-- <button id="googleLoginButton">Login with Google</button> -->
+              <script src="https://accounts.google.com/gsi/client" async defer></script>
+              <div id="g_id_onload"
+                   data-client_id="792002934801-9oe7b3563fitfaanqqgv179kksrmhqrp.apps.googleusercontent.com"
+                   data-callback="handleCredentialResponse"
+                   data-login_uri="http://localhost:5500"
+                   data-auto_prompt="false">
+              </div>
+              <div class="g_id_signin" data-type="standard"></div>
+              
+              <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+              <br>
+			  <div class="forgot-password">
+				<a href="forgot-password.html">Forgot Password?</a>
+			  </div>
+			  <div class="signup-link">
+				<p>Don't have an account? <a href="#">Sign up</a></p>
+			  </div>
+			</div>
+		  </section>
+ 
+      
+
+
+
+
+
+
+
+    <!-- <div style="height: 70vh;"></div> -->
+    <div class="redLine"></div>
+
+    <footer id="footer" class="">
+        <div class="container">
+            
+            <div  class="d-flex" style="align-items: center;">
+                <div  class="col-md-3 col-footer footerColum">
+                    <div>
+                   <h3>
+                    ABOUT US
+                   </h3>
+                   <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  </p>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                  </ul>
+                </div>
+                </div>
+                <div  class="col-md-3 col-footer footerColum">
+                    <div>
+                    <h3>
+                        CATEGORIES
+                    </h3>
+                    <ul>
+                        <li><a href="#">Hot deals</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Cameras</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                 </div>
+                 <div class="clearfix visible-xs"></div>
+                 <div class="col-md-3 col-footer footerColum">
+                    <div>
+                    <h3>
+                        INFORMATION
+                    </h3>
+                   <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                 </div>
+                </div>
+                 <div class="col-md-3 col-footer footerColum" >
+                    <div>
+                        <h3>
+                            SERVICE
+                        </h3>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">View Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+
+                 </div>
+
+               
+            </div>
+
+        </div>
+        <div style="    background: #1E1F29;" >
+            <div class="container">
+                <div class="d-flex footerIcons">
+        <div><i class="fa-brands fa-cc-visa"></i></div>
+        <div><i class="fa-regular fa-credit-card"></i></div>
+        <div><i class="fa-brands fa-cc-paypal"></i></div>
+        <div><i class="fa-brands fa-cc-mastercard"></i></div>
+        <div><i class="fa-brands fa-cc-discover"></i></div>
+        <div><i class="fa-brands fa-cc-amex"></i></div>
+
+</div>
+<div class="footerLastText ">
+    Copyright ©2023 All rights reserved | This template is made with <span><i class="fa-regular fa-heart"></i></span> by Colorlib</div>
+
+</div>
+
+        </div>
+
+    </footer>
+    <script src="./js/services/localDataManager.js"></script>
+    <script src="https://kit.fontawesome.com/0b7a4d3757.js" crossorigin="anonymous"></script>
+    <!-- <script src="./js/scriptShared.js" crossorigin="anonymous"></script> -->
+
+    <script src="./js/script.js" crossorigin="anonymous"></script>
+    <script src="./js/frontend-k.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.form-control{
+    height: 30px!important;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border:#D10024 solid 2px; */
+    border:#333 solid 2px;
+}
+.form-group{
+    padding: 20px 0px;
+}
+.form-control:focus {
+
+    box-shadow: 0 0 5px #333;
+  }
+.btn-red{
+    background: #D10024;
+    color: #FFF;
+    height: 30px!important;
+    border-radius: 5px;
+    border:#D10024 solid 2px;
+    padding: 0px 15px;
+}

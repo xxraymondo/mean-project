@@ -1,0 +1,105 @@
+:root{
+    --bestSaleInfoHeight: 35vh;
+    --itemTransparentPlus:#2525258a;
+    --itemTransparent: #25252536;
+}
+#bestSaleContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+#bestSaleContainer > span{
+    text-align: center;
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+.bestSaleItem {
+    background-color: var(--orange);
+    overflow: hidden;
+    height: var(--bestSaleInfoHeight);
+    position: relative;
+    border-radius: 5px;
+}
+.bestSaleItem :where(img) {
+    height: var(--bestSaleInfoHeight);
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: 0.5s;
+    z-index: 0;
+}
+.bestSaleItem:hover :where(img){
+    opacity: 0.3;
+}
+.bestSaleItem:hover :where(.bestSaleItemInfo){
+    background-color: var(--itemTransparentPlus);
+}
+ h2{
+    font-family: var(--fontFamily);
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5vh;
+}
+.bestSaleItem > :first-child{
+    position: absolute;
+}
+.bestSaleItem > span{
+    position: absolute;
+    right: 10%;
+    font-size: 12rem;
+    opacity: 0.2;
+    font-weight: 900;
+    font-family: var(--fontFamily);
+}
+.bestSaleItemInfo{
+    position: absolute;
+    z-index: 1;
+    font-family: var(--fontFamily);
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: var(--itemTransparent);
+}
+.bestSaleItemInfo > h3{
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2vh;
+}
+.bestSaleItemInfo > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size:1.2rem ;
+    color: var(--white);
+}
+.bestSaleItemInfo :where(span){
+    font-weight: 300;
+}
+.infoLable{
+    color: var(--offWhite);
+    font-weight:400 ;
+}
+#bestSaleLoadMore{
+    font-family: var(--fontFamily);
+    width: max-content;
+    cursor: pointer;
+    margin: 5px auto;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    border-bottom: 1px solid var(--transparent);
+    transition: 0.5s;
+    color: var(--gray);
+}
+#bestSaleLoadMore:hover{
+    border-bottom: 1px solid var(--gray);
+    color: var(--darkGray);
+}

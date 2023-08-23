@@ -1,0 +1,56 @@
+main > h1{
+    font-family: var(--fontFamily);
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 5vh 0;
+}
+#usersList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 10px;
+    border-radius: 10px;
+    font-family: var(--fontFamily);
+    font-size: 1.1rem;
+    background-color: var(--white);
+    margin: 0 10px;
+}
+
+.user :where(a){
+    color: var(--gray);
+    text-decoration: none;
+    background-color: var(--offWhite);
+    text-align: center;
+    align-self: self-start;
+}
+.role{
+    background-color: var(--skyBlue);
+    color:var(--white);
+}
+
+.user :where(select){
+    font-family: var(--fontFamily);
+   
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    margin-right: 1vw;
+}
+.user :where(option){
+    background-color: var(--white);
+    color: var(--gray);
+}
+@media screen and (max-width: 500px) {
+    .user :where(a){
+        display: none;
+    }
+    .user{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

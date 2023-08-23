@@ -1,0 +1,77 @@
+:root{
+    --semiTransparent:#25252562;
+    --transparent: #f7f7f700;
+    --backGround:#f7f7f7;
+    --gray: #3c3d3d;
+    --drakGray:#202020;
+    --orange: #ff8300;
+    --skyBlue:#07b3aa;
+    --green:#00b26f;
+    --red:#fa4251;
+    --offWhite:#cccccc;
+    --white: rgb(255, 255, 255);
+    --blue:#406fb0;
+    --lightGray: #6c757d;
+    --fontFamily: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+main > div{
+    width: 35%;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+    background-color: var(--backGround);
+    overflow: hidden;
+    border-radius: 20px;
+}
+main :where(input){
+    background-color: var(--backGround);
+    flex-grow: 1;
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-weight: 300;
+    padding: 5px 0;
+}
+main :where(i){
+    padding: 0 15px;
+}
+main > :nth-child(2) :where(i){
+    cursor: pointer;
+    transition: 0.5s;
+}
+main > :nth-child(2) :where(i):hover{
+    color: var(--blue);
+}
+.loginButton{
+    padding: 0;
+    justify-content: center;
+    margin-top: 3vh;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--gray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    transition: 0.5s;
+}
+.loginButton:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
+}
+main > :last-child > h2{
+    font-family: var(--fontFamily);
+    font-weight: 350;
+    margin: 0;
+    padding: 10px;
+}

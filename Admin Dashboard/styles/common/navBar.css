@@ -1,0 +1,306 @@
+:root{
+    --semiTransparent:#25252562;
+    --transparent: #f7f7f700;
+    --backGround:#f7f7f7;
+    --gray: #3c3d3d;
+    --drakGray:#202020;
+    --orange: #ff8300;
+    --skyBlue:#07b3aa;
+    --green:#00b26f;
+    --red:#fa4251;
+    --offWhite:#cccccc;
+    --white: rgb(255, 255, 255);
+    --blue:#406fb0;
+    --lightGray: #6c757d;
+    --fontFamily: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--backGround);
+}
+#desktopNav{
+    display: flex;
+    background-color: var(--gray);
+    justify-content: space-between;
+    font-family: var(--fontFamily);
+}
+#desktopNav > :first-child{
+    padding-left: 1vw;
+}
+#desktopNav > :first-child > img{
+    object-fit: cover;
+}
+#desktopNav > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    color: var(--offWhite);
+    text-decoration: none;
+    flex-grow: 1;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--gray);
+    transition: 0.5s;
+    border-top: 0.5px solid var(--lightGray);
+    border-left: 0.5px solid var(--lightGray);
+    border-top: 0.5px solid var(--lightGray);
+    font-family: var(--fontFamily);
+}
+
+#desktopNav > :nth-child(2):hover, #desktopNav > :nth-child(3):hover, #desktopNav > :nth-child(4):hover{
+    color: var(--blue);
+    border-bottom: 5px solid var(--blue);
+}
+/*#desktopNav > :nth-child(2), #desktopNav > :nth-child(3) , #desktopNav > :nth-child(4){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-size: 1.1rem;
+}*/
+#desktopNav >:first-child {
+    flex-grow: 2;
+    display: flex;
+    border-left: 0;
+}
+  
+#desktopNav > :last-child {
+    position: relative;
+    flex-grow: 1.2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2vw;
+    border-top: 0.5px solid var(--lightGray);
+    border-left: 0.5px solid var(--lightGray);
+    border-top: 0.5px solid var(--lightGray);
+    color: var(--offWhite);
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+
+#desktopNav > :last-child > i{
+    font-size: 1.5rem;
+}
+.userOptions {
+    transition: 0.5;
+    cursor: pointer;
+    padding-right: 20px;
+}
+.profileImage{
+   height: 60px;
+   width: 60px;
+   background-color: var(--orange);
+   border-radius: 50%;
+   display: inline-flexbox;
+   overflow: hidden;
+}
+.profileImage > img{
+    width: 80px;
+    height: auto;
+    object-fit: fill;
+}
+.userInfo{
+    padding: 2vw 2vh;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    border-bottom:0.5px solid var(--offWhite);
+    
+}
+.userInfo > :last-child :first-child{
+    color: var(--drakGray);
+    font-size: 1.2rem;
+}
+.userInfo > :last-child :last-child{
+    color: var(--lightGray);
+}
+.optionsList{
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 100%;
+    font-weight: normal;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px 0px var(--lightGray);
+    transition: 0.5s
+}
+.optionsList > ul{
+    list-style-type: none;
+    color: var(--drakGray);
+    word-spacing: 2rem;
+    
+}
+.optionsList :where(li){
+    padding: 1vh 2vw;
+    transition: 0.5s;
+}
+.optionsList :where(li):hover{
+    padding: 1vh 1.5vw;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+   /**********side bar************/
+#sideBarOverlay{
+    box-shadow: 0 15px 5px 0px var(--lightGray);
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    background-color: var(--semiTransparent);
+    width: 0%;
+    height: 100%;
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+#sideBarOverlay > :first-child{
+    flex-grow:2 ;
+}
+
+#sideBar{
+    z-index: 3;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 0px;
+    padding: 10vh 2vw;
+    gap: 2vh;
+    transition: 0.5s;
+}
+#sideBar > h2{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 2vh;
+    text-align: center;
+}
+#sideBar > span{
+    text-align: center;
+    margin-bottom: 1vh;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--gray);
+}
+.inputSection{
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    justify-content: space-between;
+    align-items: center;
+}
+.inputSection > input{
+    cursor: pointer;
+    font-family: var(--fontFamily);
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: var(--backGround);
+    color: var(--gray);
+    font-weight: 300;
+    outline: none;
+    border: none;
+}
+#settingButtons{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
+    margin-top: 10vh;
+}
+#settingButtons > button {
+    height: min-content;
+    flex-grow: 1;
+    padding: 1.5vh 0;
+    color: var(--white);
+    border: 1px solid var(--transparent);
+    cursor: pointer;
+    border-radius: 10px;
+}
+#settingButtons > :last-child{
+    background-color: var(--green);
+}
+#settingButtons > :first-child{
+    background-color: var(--red);
+}
+/*******************************MOBILE NAV****************/
+#mobileNav{
+    background-color: var(--gray);
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    color: var(--offWhite);
+    font-size: 1.3rem;
+    font-family: var(--fontFamily);
+    
+}
+#mobileNav > a{
+    text-decoration: none;
+    color: var(--offWhite);
+    padding-left: 4vw;
+}
+.mobileMenu{
+    padding-right: 4vw;
+    cursor: pointer;
+}
+.mobileMenu > i{
+    font-size: 2rem;
+}
+.navMenuItems{
+    position: relative;
+    height: 0;
+    display: none;
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-family: var(--fontFamily);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.navMenuItems > :last-child{
+    align-self: center;
+    padding: 1vh 2vw;
+    background-color: var(--offWhite);
+    cursor: pointer;
+}
+.navMenuItems > a{
+    text-decoration: none;
+}
+.navMenuItems > a:hover, .navMenuItems > div:hover{
+    border-bottom: 0.5px solid var(--gray);
+    color: var(--blue);
+}
+.menuItem{
+    cursor: pointer;
+    display: flex;
+    margin: 0 20px;
+    align-items: center;
+    gap: 3vw;
+    padding: 15px 5vw;
+    border-bottom: 0.5px solid var(--offWhite);
+    color: var(--gray);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 850px) {
+    #mobileNav{
+        display: flex;
+    }
+    #desktopNav{
+        display: none;
+    }
+    .navMenuItems{
+        display: none;
+    }
+}

@@ -1,0 +1,162 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overAllContainer {
+  margin: auto;
+  min-height:120vh;
+
+}
+
+.checkoutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  ;
+  margin-top: 0px;
+  padding: 15%;
+  padding-top: 0%;
+  position: absolute;
+  /* background-color: aqua; */
+  width: 100%;
+  gap: 2%;
+}
+
+.billingInputsContainer {
+
+  flex: 1;
+
+  width: 100%;
+  min-width: 100%;
+  left: 0;
+  /* background-color: brown; */
+
+
+}
+
+.orderSideContainer {
+  flex: 1;
+  /* background-color: antiquewhite; */
+  padding: 5%;
+  border: 2px solid rgb(81, 53, 53, 0.1);
+  height: auto;
+  min-width: 100%;
+  width: 100%;
+  right: 0;
+
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 5rem;
+}
+
+.section-title {
+  font-weight: bolder;
+
+}
+
+.payment-method {
+  margin: 5%;
+  gap: 5%;
+}
+
+.order-total {
+  color: rgb(240, 36, 60);
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+
+.create-acc-caption {
+  display: none;
+}
+
+.shipping-caption {
+  display: none;
+}
+
+.direct-bank-caption {
+  display: none;
+}
+
+.check-caption {
+  display: none;
+}
+
+.paypal-caption {
+  display: none;
+}
+
+.shiping-details,
+.billing-details {
+  padding: 5%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center-ele {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.order-summary {
+  margin: auto;
+  padding: 5%;
+
+}
+.row {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.order-notes {
+  width: 100%;
+}
+
+.shippingInputs,
+.row .itemInput {
+  margin: 2%;
+}
+
+.input {
+  width: 100%;
+  height: 30px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  height: 8%;
+
+}
+
+.place-order-btn {
+  width: 100%;
+  font-weight: bolder;
+  margin-top: 5%;
+  background-color: rgb(240, 36, 60);
+  font-size: 20px;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 60px;
+
+}
+/* ----------media Query ----------- */
+@media screen and (max-width: 900px) {
+  .checkoutContainer {
+    display: block;
+   height: 150vh;
+  }
+}

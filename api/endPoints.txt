@@ -1,0 +1,23 @@
+email:teamcodemaster@gmail.com
+  
+
+
+test login 
+{
+  "email": "justbegintoday@gmail.com",
+  "password": "codemaster"
+}
+
+
+
+http://localhost:3000/register
+http://localhost:3000/login
+http://localhost:3000/logout
+http://localhost:3000/forgot-password
+http://localhost:3000/reset-password
+
+
+category endpoint 
+
+http://localhost:3000/category/64d82ccbb9cfe2e394b17445   (GET by id , delete by id , update by id)
+http://localhost:3000/category/      (GET All Categories , Post  for create Category )

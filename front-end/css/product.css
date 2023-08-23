@@ -1,0 +1,234 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  margin: auto;
+  width: 80%;
+
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2%;
+  padding: 2%;
+
+
+}
+
+.imgSlider {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: grid;
+
+}
+
+.discreptionContainer {
+
+  grid-column-start: 6;
+  grid-column-end: 7;
+
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+  color: #e6e6e6;
+}
+
+.row {
+
+  display: flex;
+  padding: 5%;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.column {
+  float: left;
+  width: 100%;
+}
+
+.productDiscreption {
+  width: 70%;
+}
+
+.sliderMainImg {
+
+  grid-column-start: 3;
+  grid-column-end: 6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.productPrice {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  color: rgb(240, 36, 60);
+  font-weight: bolder;
+
+}
+
+.discreptionContainer .starRating .checked {
+  color: rgb(240, 36, 60);
+}
+
+.discreptionContainer .starRating a:hover {
+  color: rgb(240, 36, 60);
+}
+
+.productPrice h5 {
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.priceSale {
+  text-decoration: line-through;
+  color: #8D99AE;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.wishAndCompare {
+  margin: 1%;
+}
+
+.addToCartBtn {
+  background-color: rgb(240, 36, 60);
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 60px;
+}
+
+.addToCartBtn:hover {
+  background-color: rgb(255, 255, 255);
+
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev {
+  cursor: pointer;
+  padding: 10%;
+  color: white;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgba(84, 83, 83, 1);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.next {
+  cursor: pointer;
+  padding: 10%;
+  color: white;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgba(84, 83, 83, 1);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgb(240, 36, 60);
+}
+
+/* Container for image text */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sliderMainImg:hover {
+  width: 120%;
+  transition-duration: 0.5s;
+
+
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  border: solid gray 1px;
+  height: 100%;
+  width: 80%;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+
+}
+
+.active {
+
+  border: solid 2px rgb(240, 36, 60);
+}
+
+.middleDividerLine {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.middleDividerLine div {
+  width: 50%;
+
+
+}
+
+/* ................. Related Products .................. */
+.relatedProductMain {
+  text-align: center;
+
+}
+
+.relatedProductContainer {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.relatedProductContainer img {
+  width: 100%;
+}
+
+.relatedProduct:hover {
+
+  border: solid 2px rgb(240, 36, 60);
+}

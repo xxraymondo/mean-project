@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index/index.css">
+    <link rel="stylesheet" href="./styles/common/notification.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <div>
+            <input type="email" id="userEmail" placeholder="User Email">
+           <div> <i class="fa-solid fa-at"></i></div>
+        </div>
+        <div>
+            <input type="password" id="userPassword" placeholder="Password">
+            <div onclick="auth.toggelViewPassword(this)"><i class="fa-regular fa-eye"></i></div>
+        </div>
+        <a href="">Forget Password?</a>
+        <div class="loginButton" onclick="auth.login()"><h2>Login</h2></div>
+    </main>
+    <div id="notification">
+        <span> Updated Successfully</span>
+    </div>
+    <script src="./scripts/common/notification.js"></script>
+    <script src="./services/localDataManager.js"></script>
+    <script src="./services/apis.js"></script>
+    <script src="./services/services.js"></script>
+    <script src="./scripts/auth/login.js"></script>
+</body>
+</html>

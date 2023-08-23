@@ -1,0 +1,155 @@
+### Auth APIs
+### registe new user
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name":"Jeo",
+    "email":"fyoussef25@gmail.com",
+    "password":"123456789"
+}
+### login 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email":"fyoussef23@gmail.com", 
+    "password":"123456789"
+}
+###
+POST http://localhost:3000/product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "title": "toBeDeleted",
+    "buyingPrice": 3000,
+    "price": 3800,
+    "amount": 40,
+    "img": ["https://iili.io/HZzKxaI.jpg",
+            "https://iili.io/HZzKo3N.jpg",
+            "https://iili.io/HZzKC4p.jpg"],
+    "description": "Timberland PRO Men's Base Plate Short Sleeve T-Shirt with Chest Logo",
+    "keywords": "Timberland  Chest Logo",
+    "category":"menTops"
+}
+###
+PUT http://localhost:3000/product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "title":"Sportive Lace-Up for boys ",
+    "productId": "64c3fa6ab8de91b71f3eda25",
+    "img":[
+        "https://iili.io/HZxyYtp.jpg",
+        "https://iili.io/HZxy7NR.jpg",
+        "https://iili.io/HZxy5Av.jpg"
+    ]
+}
+### getting products without any filters, note that the result will be paginated with default limit 8 items per page
+GET http://localhost:3000/product
+### getting the products by search expression
+GET http://localhost:3000/product?expr=men
+### change the item per page count, this will retuen two products
+GET http://localhost:3000/product?limit=12
+### use the next and previous in the response of GET product to get the next or previous page
+GET http://localhost:3000/product?limit=2&page=2
+### getting products limited by pric, here only above 3000$ products will be returned
+GET http://localhost:3000/product?from=3000
+### products under 3000 will be returned 
+GET http://localhost:3000/product?to=3000
+### In this example the products prices range between  10$ and 100$ 
+GET http://localhost:3000/product?to=100&from=10
+### Category filter example
+GET http://localhost:3000/product?category=WomenShoes
+### plz note that u can use all the parameters together in one url
+GET http://localhost:3000/product?category=WomenTop&from=340&to=450&limit=2
+
+### delete product 64c40d97b0c91e98225ea3f4
+DELETE http://localhost:3000/product/64c40d97b0c91e98225ea3f4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+### add product to cart
+POST http://localhost:3000/cartItem
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "product": "64c3feeb41fcad2a7e158395",
+    "itemsCount":5
+}
+### delete cart item from cart
+DELETE  http://localhost:3000/cartItem/64c3f64f55a84f4e8bce459a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+### Get user Cart 
+GET http://localhost:3000/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+### To update any cart Item count send the new count and the product id to the body see the example below
+PUT http://localhost:3000/cartItem
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "count": 1,
+    "productId":"64c3f57d55a84f4e8bce4598"
+}
+
+### Order and Checkout
+### checkout
+POST http://localhost:3000/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "mobile":"01227360505",
+    "addressLine":"Omranya",
+    "district":"Haram",
+    "state":"Giza",
+    "paymentMethod":"COD"
+}
+### when the success page opened
+POST http://localhost:3000/paymentSuccess
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "paymentId": null
+}
+
+### when the cancel Page is opened
+GET http://localhost:3000/paymentCanceled
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+###
+http://localhost:3000/inventory?from=2023-08-01&to=2023-08-04&limit=5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+### User Operations 
+### get active users
+GET http://localhost:3000/active-users?from=2023-08-05
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+###
+GET http://localhost:3000/dashboardInfo?from=2023-08-01
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+###
+PUT http://localhost:3000/orderStatus
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+Content-Type: application/json
+
+{
+    "orderId":"64ccf775f1071c6e93ec2d3a",
+    "status":"processing"
+}
+###
+GET http://localhost:3000/ordersByStatus?status=received
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+### 64d685a88ac14b2c9c9acf5b
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6ImFkbWluIiwiY2FydElkIjoiNjRjNjZkMDJmNDYzZTNlODFlMDA2MDU4IiwiaWF0IjoxNjkxMjc4NDAxfQ.cXGPlgwPS1ziyabataXBVNKD_-R6y2ZisW5FimUh0Ao
+###
+PUT http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTYiLCJ1c2VyUm9sZSI6InN1cGVyYWRtaW4iLCJjYXJ0SWQiOiI2NGM2NmQwMmY0NjNlM2U4MWUwMDYwNTgiLCJpYXQiOjE2OTE3ODkzMzB9._A7TzTSk6SO_Srd8JuYPV0yBQiLpFIroCYV9Mwt4Fgs
+Content-Type: application/json
+
+{
+    "userId":"64d685a88ac14b2c9c9acf5b",
+    "role":"admin"
+}

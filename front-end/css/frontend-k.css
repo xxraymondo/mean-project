@@ -1,0 +1,171 @@
+section.register {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .register-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: red;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Override the h1 style for the Register form */
+  .register-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Override the label style for the Register form */
+  .register-box div label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Override the input style for the Register form */
+  .register-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+  }
+  
+  /* Override the password-input style for the Register form */
+  .register-box .password-input {
+    position: relative;
+  }
+  
+  /* Override the password-toggle style for the Register form */
+  .register-box .password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 55%; /* Adjust the top value to align with the password field */
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* Override the button style for the Register form */
+  .register-box button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  /* Override the signup-link style for the Register form */
+  .register-box .signup-link {
+    text-align: center;
+  }
+  
+  /* Override the link style for the Register form */
+  .register-box .signup-link a {
+    color: white;
+  }
+  
+  /* Override the link hover style for the Register form */
+  .register-box .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+
+section.login {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: red;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  div label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+  }
+  
+
+  .password-input {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .forgot-password,
+  .signup-link {
+    text-align: center;
+  }
+  
+  .signup-link a {
+    color: white;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+
+  .error-message {
+    color: #721c24; /* Text color for danger messages */
+    background-color: #f8d7da; /* Background color for danger messages */
+    border: 1px solid #f5c6cb; /* Border color for danger messages */
+    padding: 0.75rem 1.25rem; /* Padding for the error message */
+    border-radius: 0.25rem; /* Border radius for the error message */
+    margin-top: 10px; /* Margin above the error message */
+  }
+  
+  
